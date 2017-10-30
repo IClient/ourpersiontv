@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bc">
+
+    <ImageView
+        android:id="@+id/dialog_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="@dimen/x30"
+        android:src="@mipmap/bjdialog_icon" />
+
+    <ImageView
+        android:id="@+id/dialog_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@mipmap/bjdialog_bg" />
+
+
+    <TextView
+        android:id="@+id/age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="20dp"
+        android:text="78岁"
+        android:textColor="#ffffff" />
+
+    <comt.example.administrator.OurPersionTV.CircleImageView
+        android:id="@+id/bj_image"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_above="@id/age"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="10dp"
+        android:src="@mipmap/oldsix" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_toLeftOf="@id/age"
+        android:text="张三"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:id="@+id/sex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/age"
+        android:text="男"
+        android:textColor="#ffffff" />
+
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/age"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="床位"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/bed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="401房间101号"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+
+    <!--<TextView-->
+    <!--android:id="@+id/bjdialog_time"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@id/dialog_bg"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_marginTop="20dp"-->
+    <!--android:text="00 : 00 : 59"-->
+    <!--android:textColor="#ffffff"-->
+    <!--android:textSize="28sp" />-->
+    <Chronometer
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dialog_bg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textColor="#ffffff"
+        android:textSize="28sp"
+    android:id="@+id/bjdialog_time"/>
+</RelativeLayout>

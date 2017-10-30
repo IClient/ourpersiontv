@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/background">
+
+    <ImageView
+        android:id="@+id/tvlogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/logo" />
+
+    <LinearLayout
+        android:id="@+id/benlouolman_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/x20"
+        android:layout_marginTop="@dimen/x10"
+        android:layout_toRightOf="@id/tvlogo"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="本楼老人："
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/benlouoldman_viewpager"
+            android:layout_width="250dp"
+            android:layout_height="50dp"></android.support.v4.view.ViewPager>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="55dp"
+            android:gravity="right|center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/tv_futureimage"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="right"
+                android:src="@mipmap/w13" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="15:50"
+                android:textColor="#ffffff"
+                android:textSize="26sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpagerbig"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x240"
+        android:layout_below="@+id/benlouolman_layout"
+        android:layout_marginRight="50dp"
+        android:layout_toEndOf="@+id/tvlogo"></android.support.v4.view.ViewPager>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvlogo"
+        android:layout_toLeftOf="@id/viewpagerbig"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <comt.example.administrator.OurPersionTV.CircleImageView
+            android:id="@+id/benlouoldmanzhibanren_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@mipmap/staff_image" />
+
+
+        <TextView
+            android:id="@+id/benlouoldmanzhibanren_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:text="值班人:  高晓琴"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:paddingLeft="10dp"
+                android:text="当前楼层:"
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:id="@+id/dangqianlouc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+
+                android:background="#336699"
+                android:gravity="center"
+                android:text="一楼"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_horizontal"
+                android:text="当前楼层人数:"
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:id="@+id/dangqianloucruzhurenshu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:text="204人"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/plan_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"></android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/x10"
+        android:layout_marginRight="55dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_yearmonthday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2017年09月28日"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_nongli"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="农历七月十五"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+
+</RelativeLayout>
+
+
+
